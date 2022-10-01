@@ -1,0 +1,37 @@
+<div class="container w-50 mt-5 text-center">
+  <div class="text-center display-6 m-3 text-white">
+    Word Limit: {{ limit }}
+  </div>
+  <input
+    type="range"
+    class="form-control-range w-100"
+    min="1"
+    max="25"
+    [value]="limit"
+    (change)="handleLimitChange($event)"
+  />
+  <br />
+  <button class="btn btn-info" (click)="generateWords()">Generate Words</button>
+</div>
+
+<div *ngIf="words" class="card card-body container">
+  <p class="display-4">
+    {{ words }}
+  </p>
+</div>
+
+<div class="container w-50 text-center">
+  <div class="text-center display-6 m-3 text-white">Random Countries</div>
+  <button class="btn btn-info" (click)="generateRandomNumber()">
+    Generate Random Number
+  </button>
+  <div class="text-center display-6 m-3 text-white" *ngIf="randomNumber">
+    Random Number: {{ randomNumber }}
+  </div>
+</div>
+
+<div *ngIf="randomNumber > 0" class="card card-body container">
+  <p class="display-4">
+    {{ countries }}
+  </p>
+</div>
