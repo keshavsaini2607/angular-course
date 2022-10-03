@@ -1,0 +1,17 @@
+@import url('~bootstrap/dist/css/bootstrap.min.css');
+@import url('~ngx-toastr/toastr');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-image: url('./assets/back.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
